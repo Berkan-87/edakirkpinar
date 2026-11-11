@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Av. Eda Kırkpınar Küçük | Hukuki Danışmanlık Bürosu</title>
+    <meta name="description"
+        content="Av. Eda Kırkpınar Küçük - Aile, ceza, ticaret ve iş hukuku alanlarında İzmir Bayraklı'da profesyonel hukuki danışmanlık ve avukatlık hizmetleri.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --lacivert: #0B1F3A;
+            --lacivert-acik: #142c4d;
+            --altin: #C9A24B;
+            --altin-acik: #e0c079;
+            --krem: #F8F6F1;
+            --gri: #6b7280;
+            --koyu-gri: #1f2937;
+            --beyaz: #ffffff;
+            --golge: 0 10px 30px rgba(11, 31, 58, 0.08);
+            --gecis: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--koyu-gri);
+            background: var(--beyaz);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .konteyner {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .bolum {
+            padding: 100px 0;
+        }
+
+        .bolum-baslik {
+            font-size: 2.6rem;
+            color: var(--lacivert);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .bolum-alt {
+            text-align: center;
+            color: var(--gri);
+            max-width: 620px;
+            margin: 0 auto 60px;
+            font-size: 1.05rem;
+        }
+
+        .altin-cizgi {
+            width: 60px;
+            height: 3px;
+            background: var(--altin);
+            margin: 16px auto 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--gecis);
+            border: none;
+        }
+
+        .btn-altin {
+            background: var(--altin);
+            color: var(--lacivert);
+        }
+
+        .btn-altin:hover {
+            background: var(--altin-acik);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(201, 162, 75, 0.35);
+        }
+
+        .btn-cerceve {
+            background: transparent;
+            color: var(--beyaz);
+            border: 1.5px solid var(--beyaz);
+        }
+
+        .btn-cerceve:hover {
+            background: var(--beyaz);
+            color: var(--lacivert);
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--gecis);
+            background: transparent;
+        }
+
+        .navbar.kaydirildi {
+            background: rgba(11, 31, 58, 0.97);
+            padding: 14px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-ic {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--beyaz);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--altin);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--beyaz);
+            font-size: 0.92rem;
+            font-weight: 400;
+            position: relative;
+            padding: 4px 0;
+            transition: var(--gecis);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--altin);
+            transition: var(--gecis);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-tel {
+            color: var(--altin) !important;
+            font-weight: 500 !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            width: 26px;
+            height: 2px;
+            background: var(--beyaz);
+            transition: var(--gecis);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(11, 31, 58, 0.94) 0%, rgba(11, 31, 58, 0.78) 100%),
+                url('https://avedakirkpinarlaw.wordpress.com/wp-content/uploads/2023/12/1680731559280-2.jpg') center/cover no-repeat;
+            color: var(--beyaz);
+            padding: 120px 0 80px;
+        }
+
+        .hero-ic {
+            max-width: 720px;
+        }
+
+        .hero-etiket {
+            display: inline-block;
+            color: var(--altin);
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            margin-bottom: 24px;
+            color: var(--beyaz);
+        }
+
+        .hero h1 span {
+            color: var(--altin);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 40px;
+            max-width: 560px;
+            font-weight: 300;
+        }
+
+        .hero-butonlar {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hakkimizda {
+            background: var(--krem);
+        }
+
+        .hakkimizda-izgara {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .hakkimizda-gorsel {
+            position: relative;
+        }
+
+        .hakkimizda-gorsel img {
+            border-radius: 4px;
+            box-shadow: var(--golge);
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .hakkimizda-gorsel::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 120px;
+            height: 120px;
+            border-top: 3px solid var(--altin);
+            border-left: 3px solid var(--altin);
+            z-index: -1;
+        }
+
+        .hakkimizda-metin h2 {
+            font-size: 2.4rem;
+            color: var(--lacivert);
+            margin-bottom: 20px;
+        }
+
+        .hakkimizda-metin .unvan {
+            color: var(--altin);
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .hakkimizda-metin p {
+            color: var(--gri);
+            margin-bottom: 18px;
+            font-size: 1.02rem;
+        }
+
+        .istatistikler {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 36px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(11, 31, 58, 0.1);
+        }
+
+        .istatistik h3 {
+            font-size: 2.2rem;
+            color: var(--altin);
+        }
+
+        .istatistik p {
+            font-size: 0.85rem;
+            color: var(--gri);
+            margin: 0;
+        }
+
+        .uzmanlik-izgara {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .uzmanlik-kart {
+            background: var(--beyaz);
+            border: 1px solid rgba(11, 31, 58, 0.08);
+            padding: 40px 36px;
+            border-radius: 4px;
+            transition: var(--gecis);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .uzmanlik-kart::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--altin);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--gecis);
+        }
+
+        .uzmanlik-kart:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--golge);
+            border-color: transparent;
+        }
+
+        .uzmanlik-kart:hover::before {
+            transform: scaleX(1);
+        }
+
+        .uzmanlik-bas {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+
+        .uzmanlik-ikon {
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(201, 162, 75, 0.12);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            color: var(--altin);
+        }
+
+        .uzmanlik-kart h3 {
+            font-size: 1.4rem;
+            color: var(--lacivert);
+        }
+
+        .uzmanlik-kart>p {
+            color: var(--gri);
+            font-size: 0.96rem;
+            margin-bottom: 16px;
+        }
+
+        .uzmanlik-liste {
+            border-top: 1px dashed rgba(11, 31, 58, 0.12);
+            padding-top: 14px;
+        }
+
+        .uzmanlik-liste li {
+            position: relative;
+            padding-left: 20px;
+            font-size: 0.9rem;
+            color: var(--koyu-gri);
+            margin-bottom: 8px;
+        }
+
+        .uzmanlik-liste li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            top: -1px;
+            color: var(--altin);
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .neden-biz {
+            background: var(--lacivert);
+            color: var(--beyaz);
+        }
+
+        .neden-biz .bolum-baslik {
+            color: var(--beyaz);
+        }
+
+        .neden-biz .bolum-alt {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .neden-izgara {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 20px;
+        }
+
+        .neden-kart {
+            text-align: center;
+        }
+
+        .neden-ikon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--altin);
+            border-radius: 50%;
+            font-size: 1.8rem;
+            color: var(--altin);
+        }
+
+        .neden-kart h3 {
+            font-size: 1.15rem;
+            color: var(--beyaz);
+            margin-bottom: 10px;
+        }
+
+        .neden-kart p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .iletisim-izgara {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+        }
+
+        .iletisim-bilgi h2 {
+            font-size: 2.2rem;
+            color: var(--lacivert);
+            margin-bottom: 20px;
+        }
+
+        .iletisim-bilgi>p {
+            color: var(--gri);
+            margin-bottom: 32px;
+        }
+
+        .bilgi-satir {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            margin-bottom: 26px;
+        }
+
+        .bilgi-ikon {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(201, 162, 75, 0.12);
+            border-radius: 50%;
+            color: var(--altin);
+            font-size: 1.1rem;
+        }
+
+        .bilgi-satir h4 {
+            font-size: 0.95rem;
+            color: var(--lacivert);
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .bilgi-satir p {
+            color: var(--gri);
+            font-size: 0.92rem;
+        }
+
+        .iletisim-form {
+            background: var(--krem);
+            padding: 44px;
+            border-radius: 4px;
+        }
+
+        .iletisim-form h3 {
+            font-size: 1.6rem;
+            color: var(--lacivert);
+            margin-bottom: 24px;
+        }
+
+        .form-grup {
+            margin-bottom: 18px;
+        }
+
+        .form-grup label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--lacivert);
+            margin-bottom: 6px;
+        }
+
+        .form-grup input,
+        .form-grup textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(11, 31, 58, 0.15);
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            background: var(--beyaz);
+            transition: var(--gecis);
+        }
+
+        .form-grup input:focus,
+        .form-grup textarea:focus {
+            outline: none;
+            border-color: var(--altin);
+            box-shadow: 0 0 0 3px rgba(201, 162, 75, 0.15);
+        }
+
+        .form-grup textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .form-grup.ikili {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-grup.ikili>div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-not {
+            font-size: 0.78rem;
+            color: var(--gri);
+            margin-top: 12px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background: #081729;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 60px 0 30px;
+            font-size: 0.9rem;
+        }
+
+        .footer-izgara {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .footer .logo {
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        .footer h4 {
+            color: var(--beyaz);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            transition: var(--gecis);
+        }
+
+        .footer ul li a:hover {
+            color: var(--altin);
+        }
+
+        .footer-alt {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--gecis);
+            color: white;
+            font-size: 1.6rem;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 900px) {
+
+            .hakkimizda-izgara,
+            .iletisim-izgara {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .uzmanlik-izgara {
+                grid-template-columns: 1fr;
+            }
+
+            .neden-izgara {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-izgara {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .bolum {
+                padding: 70px 0;
+            }
+
+            .bolum-baslik {
+                font-size: 2rem;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background: var(--lacivert);
+                flex-direction: column;
+                justify-content: center;
+                gap: 28px;
+                transition: var(--gecis);
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+            }
+
+            .nav-menu.aktif {
+                right: 0;
+            }
+
+            .nav-menu a {
+                font-size: 1.1rem;
+            }
+
+            .hamburger {
+                display: flex;
+                z-index: 1100;
+            }
+
+            .neden-izgara {
+                grid-template-columns: 1fr;
+            }
+
+            .istatistikler {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .iletisim-form {
+                padding: 28px;
+            }
+
+            .form-grup.ikili {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-butonlar .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="konteyner nav-ic">
+            <a href="#" class="logo">EDA<span> KIRKPINAR KÜÇÜK</span></a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#uzmanlik">Uzmanlık Alanları</a></li>
+                <li><a href="#neden-biz">Neden Biz?</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+                <li><a href="tel:+905064862878" class="nav-tel">+90 506 486 28 78</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menü">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="konteyner">
+            <div class="hero-ic">
+                <span class="hero-etiket">Hukuki Danışmanlık & Avukatlık</span>
+                <h1>Haklarınız İçin <span>Güçlü</span> ve Kararlı Savunma</h1>
+                <p>Av. Eda Kırkpınar Küçük olarak bireysel ve kurumsal müvekkillerimize şeffaf, gizlilik esaslı ve çözüm
+                    odaklı hukuki danışmanlık hizmeti sunuyoruz.</p>
+                <div class="hero-butonlar">
+                    <a href="#iletisim" class="btn btn-altin">Ücretsiz Ön Görüşme</a>
+                    <a href="#uzmanlik" class="btn btn-cerceve">Uzmanlık Alanları</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bolum hakkimizda" id="hakkimizda">
+        <div class="konteyner">
+            <div class="hakkimizda-izgara">
+                <div class="hakkimizda-gorsel">
+                    <img src="https://avedakirkpinarlaw.wordpress.com/wp-content/uploads/2023/12/1680731559280-2.jpg"
+                        alt="Av. Eda Kırkpınar Küçük">
+                </div>
+                <div class="hakkimizda-metin">
+                    <p class="unvan">Kurucu Avukat</p>
+                    <h2>Av. Eda Kırkpınar Küçük</h2>
+                    <p>Eda Kırkpınar Küçük Hukuk Bürosu, müvekkillerine hukuki süreçlerin her aşamasında rehberlik eden,
+                        etik değerlere bağlı ve çözüm odaklı bir danışmanlık bürosudur.</p>
+                    <p>Her dosyayı kendi özelinde değerlendiriyor, müvekkillerimizle açık iletişim kurarak süreç boyunca
+                        bilgilendirilmiş ve güvende hissetmelerini sağlıyoruz. Amacımız yalnızca hukuki temsil değil;
+                        anlaşılır, ulaşılabilir ve güvenilir bir danışmanlık ilişkisi kurmaktır.</p>
+                    <div class="istatistikler">
+                        <div class="istatistik">
+                            <h3>15+</h3>
+                            <p>Yıllık Deneyim</p>
+                        </div>
+                        <div class="istatistik">
+                            <h3>500+</h3>
+                            <p>Tamamlanan Dosya</p>
+                        </div>
+                        <div class="istatistik">
+                            <h3>7/24</h3>
+                            <p>Dönüş Desteği</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bolum" id="uzmanlik">
+        <div class="konteyner">
+            <h2 class="bolum-baslik">Uzmanlık Alanlarımız</h2>
+            <div class="altin-cizgi"></div>
+            <p class="bolum-alt">Farklı hukuk dallarında uzmanlaşmış yaklaşımımızla, ihtiyacınıza uygun detaylı ve
+                sürdürülebilir çözümler sunuyoruz.</p>
+
+            <div class="uzmanlik-izgara">
+
+                <div class="uzmanlik-kart">
+                    <div class="uzmanlik-bas">
+                        <div class="uzmanlik-ikon">⚖️</div>
+                        <h3>Aile Hukuku</h3>
+                    </div>
+                    <p>Aile hukuku, duygusal açıdan hassas süreçleri barındırdığı için hem hukuki hem de insani
+                        boyutuyla dikkatle ele alınması gereken bir alandır. Müvekkillerimizin haklarını korurken,
+                        süreci mümkün olduğunca yıpratıcı olmaktan çıkaracak bir yaklaşım benimsiyoruz.</p>
+                    <ul class="uzmanlik-liste">
+                        <li>Anlaşmalı ve çekişmeli boşanma davaları</li>
+                        <li>Velayet, kişisel ilişki ve nafaka düzenlemeleri</li>
+                        <li>Mal rejimi ve katılma alacağı hesaplamaları</li>
+                        <li>Tanıma-tenfiz ve yabancı unsurlu aile dosyaları</li>
+                    </ul>
+                </div>
+
+                <div class="uzmanlik-kart">
+                    <div class="uzmanlik-bas">
+                        <div class="uzmanlik-ikon">🛡️</div>
+                        <h3>Ceza Hukuku</h3>
+                    </div>
+                    <p>Ceza yargılamasında erken ve doğru müdahale, sürecin seyrini belirleyebilir. Soruşturma
+                        aşamasından itibaren savunma stratejisini kurgulayarak, müvekkilin haklarının usulüne uygun
+                        şekilde kullanılmasını sağlıyoruz.</p>
+                    <ul class="uzmanlik-liste">
+                        <li>Şüpheli ve sanık müdafiliği</li>
+                        <li>Mağdur ve katılan vekilliği</li>
+                        <li>İfade ve sorgu süreçlerinde hukuki destek</li>
+                        <li>İstinaf ve temyiz başvuruları</li>
+                    </ul>
+                </div>
+
+                <div class="uzmanlik-kart">
+                    <div class="uzmanlik-bas">
+                        <div class="uzmanlik-ikon">🏢</div>
+                        <h3>Ticaret ve Şirketler Hukuku</h3>
+                    </div>
+                    <p>İşletmelerin hukuki risklerini önceden tespit etmek, uyuşmazlık çıktıktan sonra çözüm üretmekten
+                        daha verimlidir. Kurumsal müvekkillerimize süreklilik esaslı, ticari hayatın hızına uygun
+                        danışmanlık sunuyoruz.</p>
+                    <ul class="uzmanlik-liste">
+                        <li>Şirket kuruluşu, tür değişikliği ve birleşmeler</li>
+                        <li>Ticari sözleşmelerin hazırlanması ve müzakere</li>
+                        <li>Cari hesap ve ticari alacak uyuşmazlıkları</li>
+                        <li>Rekabet ve haksız rekabet dosyaları</li>
+                    </ul>
+                </div>
+
+                <div class="uzmanlik-kart">
+                    <div class="uzmanlik-bas">
+                        <div class="uzmanlik-ikon">👔</div>
+                        <h3>İş Hukuku</h3>
+                    </div>
+                    <p>İş ilişkilerinde hem işçi hem de işveren tarafında dengeli bir hukuki yaklaşım gereklidir.
+                        Zorunlu arabuluculuk sürecinden dava aşamasına kadar tüm adımlarda yanınızdayız.</p>
+                    <ul class="uzmanlik-liste">
+                        <li>Kıdem, ihbar ve kötüniyet tazminatı talepleri</li>
+                        <li>İşe iade davaları ve arabuluculuk süreçleri</li>
+                        <li>İş kazası ve meslek hastalığı dosyaları</li>
+                        <li>İş sözleşmeleri ve disiplin süreçleri</li>
+                    </ul>
+                </div>
+
+                <div class="uzmanlik-kart">
+                    <div class="uzmanlik-bas">
+                        <div class="uzmanlik-ikon">🏠</div>
+                        <h3>Gayrimenkul Hukuku</h3>
+                    </div>
+                    <p>Gayrimenkul yatırımları ve mülkiyet ilişkileri, uzun vadeli ve ciddi hukuki sonuçlar doğurur.
+                        Alım-satımdan tapu iptaline kadar geniş bir yelpazede hukuki güvence sağlıyoruz.</p>
+                    <ul class="uzmanlik-liste">
+                        <li>Tapu iptali ve tescil davaları</li>
+                        <li>Kira, tahliye ve kira artış uyuşmazlıkları</li>
+                        <li>Kat mülkiyeti ve site yönetimi sorunları</li>
+                        <li>Gayrimenkul alım-satım sözleşmeleri</li>
+                    </ul>
+                </div>
+
+                <div class="uzmanlik-kart">
+                    <div class="uzmanlik-bas">
+                        <div class="uzmanlik-ikon">📋</div>
+                        <h3>Sözleşme ve Danışmanlık</h3>
+                    </div>
+                    <p>Sağlam bir hukuki zemin, ileride doğabilecek uyuşmazlıkların önlenmesinin en etkili yoludur.
+                        Sözleşmelerin hazırlanması, incelenmesi ve hukuki risk analizi konusunda kapsamlı destek
+                        sunuyoruz.</p>
+                    <ul class="uzmanlik-liste">
+                        <li>Sözleşmelerin hazırlanması ve revizyonu</li>
+                        <li>Hukuki risk analizi ve görüş yazıları</li>
+                        <li>Uyuşmazlık öncesi müzakere ve danışmanlık</li>
+                        <li>Arabuluculuk ve alternatif çözüm yolları</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bolum neden-biz" id="neden-biz">
+        <div class="konteyner">
+            <h2 class="bolum-baslik">Neden Eda Kırkpınar Küçük Hukuk?</h2>
+            <div class="altin-cizgi"></div>
+            <p class="bolum-alt">Müvekkil odaklı yaklaşımımız ve deneyimimizle süreçlerinizi kolaylaştırıyoruz.</p>
+            <div class="neden-izgara">
+                <div class="neden-kart">
+                    <div class="neden-ikon">🔒</div>
+                    <h3>Gizlilik</h3>
+                    <p>Tüm görüşme ve dosyalarınız sıkı gizlilik esasıyla korunur.</p>
+                </div>
+                <div class="neden-kart">
+                    <div class="neden-ikon">💬</div>
+                    <h3>Şeffaf İletişim</h3>
+                    <p>Süreç boyunca düzenli bilgilendirme ve açık iletişim.</p>
+                </div>
+                <div class="neden-kart">
+                    <div class="neden-ikon">🎯</div>
+                    <h3>Çözüm Odaklılık</h3>
+                    <p>Her dosya için en uygun hukuki stratejinin belirlenmesi.</p>
+                </div>
+                <div class="neden-kart">
+                    <div class="neden-ikon">⚡</div>
+                    <h3>Hızlı Dönüş</h3>
+                    <p>Taleplerinize kısa sürede yanıt ve etkin süreç yönetimi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bolum" id="iletisim">
+        <div class="konteyner">
+            <div class="iletisim-izgara">
+                <div class="iletisim-bilgi">
+                    <h2>İletişime Geçin</h2>
+                    <p>Hukuki sorularınız veya randevu talepleriniz için bize ulaşabilirsiniz.</p>
+                    <div class="bilgi-satir">
+                        <div class="bilgi-ikon">📍</div>
+                        <div>
+                            <h4>Adres</h4>
+                            <p>Mansuroğlu Mah. 1593/1 Sk. No:6 Lider Centrio C Blok D:84 Bayraklı / İzmir</p>
+                        </div>
+                    </div>
+                    <div class="bilgi-satir">
+                        <div class="bilgi-ikon">📞</div>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p><a href="tel:+905064862878">+90 506 486 28 78</a></p>
+                        </div>
+                    </div>
+                    <div class="bilgi-satir">
+                        <div class="bilgi-ikon">✉️</div>
+                        <div>
+                            <h4>E-posta</h4>
+                            <p><a href="mailto:av.edakirkpinar@gmail.com">av.edakirkpinar@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="bilgi-satir">
+                        <div class="bilgi-ikon">🕐</div>
+                        <div>
+                            <h4>Çalışma Saatleri</h4>
+                            <p>Pazartesi – Cuma: 09:00 – 18:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="iletisim-form" onsubmit="event.preventDefault(); alert('Form gönderildi (demo).');">
+                    <h3>Randevu Talebi</h3>
+                    <div class="form-grup ikili">
+                        <div><label>Ad Soyad</label><input type="text" required placeholder="Adınız"></div>
+                        <div><label>Telefon</label><input type="tel" required placeholder="05xx xxx xx xx"></div>
+                    </div>
+                    <div class="form-grup"><label>E-posta</label><input type="email" required
+                            placeholder="ornek@mail.com"></div>
+                    <div class="form-grup"><label>Konu</label><input type="text"
+                            placeholder="Görüşmek istediğiniz konu"></div>
+                    <div class="form-grup"><label>Mesajınız</label><textarea
+                            placeholder="Kısaca durumunuzu anlatabilirsiniz..."></textarea></div>
+                    <button type="submit" class="btn btn-altin" style="width:100%;">Gönder</button>
+                    <p class="form-not">* Formu göndererek KVKK kapsamında kişisel verilerinizin işlenmesine ilişkin
+                        bilgilendirmeyi okuduğunuzu kabul etmiş olursunuz.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="konteyner">
+            <div class="footer-izgara">
+                <div>
+                    <a href="#" class="logo">EDA<span> KIRKPINAR KÜÇÜK</span></a>
+                    <p>Haklarınız için güçlü ve kararlı savunma. Bireysel ve kurumsal hukuki danışmanlık hizmetleri.</p>
+                </div>
+                <div>
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul>
+                        <li><a href="#hakkimizda">Hakkımızda</a></li>
+                        <li><a href="#uzmanlik">Uzmanlık Alanları</a></li>
+                        <li><a href="#neden-biz">Neden Biz?</a></li>
+                        <li><a href="#iletisim">İletişim</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>İletişim</h4>
+                    <p>Mansuroğlu Mah. 1593/1 Sk. No:6<br>Lider Centrio C Blok D:84<br>Bayraklı / İzmir</p>
+                    <p><a href="tel:+905064862878">+90 506 486 28 78</a></p>
+                    <p><a href="mailto:av.edakirkpinar@gmail.com">av.edakirkpinar@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-alt">
+                © 2026 Av. Eda Kırkpınar Küçük. Tüm hakları saklıdır. | İzmir Barosu üyesi avukat tarafından
+                sunulmaktadır.
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/905064862878" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">💬</a>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('kaydirildi', window.scrollY > 50));
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => navMenu.classList.toggle('aktif'));
+        navMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navMenu.classList.remove('aktif')));
+    </script>
+
+</body>
+
+</html>
